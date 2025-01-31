@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>{{ session["difficulty"] }}</title>
+</head>
+<body>
+    <h3 class="definition"> {{ meaning }} </h3>
+    <h1 class="word-display">{{ display_word  }}</h1>
+    <h3 class="attempts">You have: {{ attempts }} attempts </h3>
+
+    <div class="buttons">
+        {% for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+        <button class="letters"
+            {% if letter.lower() in guessed %}
+                disabled
+            {% endif %}
+            onclick="location.href='/guess/{{ letter }}'">
+            {{ letter }}
+            </button>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
