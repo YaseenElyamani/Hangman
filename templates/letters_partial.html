@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="letters-container">
+        <form id="lettersForm" class="letters" method="POST">
+            {% for i in range(97,123) %}
+            <button type="submit" name="letter" value="{{ char(i) }}">{{ char(i) | capitalize }}</button>
+            {% endfor %}
+        </form>
+    </div>
+    
+    <h3 class="string_word">{{ display_word(string_word) }}</h3>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    
+</head>
+<body>
+    <h1>Hangman Game</h1>
+    <p>Word: {{ display_word }}</p>
+    <p>Guessed Letters: {{ guessed }}</p>
+    <p>Attempts Left: {{ attempts_left }}</p>
+
+    <div class="buttons">
+        {% for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+            <button
+                {% if letter in guessed %}
+                    disabled
+                {% endif %}
+                onclick="location.href='/guess/{{ letter }}'">
+                {{ letter }}
+            </button>
+        {% endfor %}
+    </div>
+
+    <form action="/restart" method="get" style="margin-top: 20px;">
+        <button type="submit">Restart Game</button>
+    </form>
+</body>
+</html>
