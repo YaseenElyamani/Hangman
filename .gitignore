@@ -1,0 +1,12 @@
+# ---- Environment variables ----
+.env
+
+# ---- Python ----
+__pycache__/
+
+# Flask
+instance/
+.webassets-cache
+
+# ---- VS Code ----
+.vscode/

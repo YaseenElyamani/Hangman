@@ -1,0 +1,136 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    font-family: "Kalam", serif;
+}
+body {
+    background: rgb(2,30,73);
+    background: linear-gradient(90deg, rgba(2,30,73,1) 0%, rgba(24,43,93,1) 35%, rgba(46,58,87,1) 100%);
+}
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+}
+
+h3 {
+    margin: 5% 0;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.attempts {
+    margin: 0;
+}
+
+.title {
+    text-decoration: underline;
+}
+
+.select {
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 35px;
+    margin-top: 12%;
+    border: 1px dotted white;
+    margin-left: 32%;
+    margin-right: 32%;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.buttons-container {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+button.difficulty-buttons {
+    background-color: #04AA6D; /* Green */
+    border: 1px solid transparent;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.difficulty-buttons:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+.buttons {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25%;
+    gap: 1%;
+    flex-wrap: wrap;
+    
+}
+
+button.letters {
+    border-radius: 5px;
+    margin-top: 2%;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: white;
+    font-size: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+button.letters:hover {
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+}
+
+button.letters:disabled {
+    background-color:red;
+    color: white;
+    cursor: default;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+}
+
+button.result {
+    border: 1px solid transparent;
+    background-color: white;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button.result:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.word {
+    margin: 0;
+    font-size: 25px;
+    margin-bottom: 5%;
+}
+
+.word-display {
+    text-transform: uppercase;
+}

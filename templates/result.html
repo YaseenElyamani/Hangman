@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>{{ result }}</title>
+</head>
+<body>
+    
+    <h1>
+        {% if result == "Winner" %}
+        Congratulations<br>You are a winner!
+        {% endif %}
+    </h1>
+    <h1>
+        {% if result == "Loser" %}
+            You Lose!
+        {% endif %}
+    </h1>
+
+    <h1 class="word">The word was {{ word | capitalize }} </h1>
+
+    <form class="result-container" method="POST" action="{{ url_for('result') }}">
+        <button class="result" type="submit" name="button_data" value="Yes">Play Again!</button>
+    </form>
+</body>
+</html>
